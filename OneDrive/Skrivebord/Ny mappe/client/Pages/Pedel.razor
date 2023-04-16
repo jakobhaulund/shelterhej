@@ -1,0 +1,86 @@
+﻿@page "/pedel"
+@using sheltermini.Shared;
+@inject HttpClient Http;
+
+<!--
+<h1 class="mb-3 mt-3">Booking Oversigter</h1>
+ 
+<EditForm Model="@Shelter" class="row p-3">
+   <div class="col-md-12 mb-3">
+      <label for="Name">Name</label>
+      <InputText id="Name" @bind-Value="Shelter.Name" class="form-control" />
+   </div>
+   <div class="col-md-6 mb-3">
+      <label for="KommuneName">Kommunenavn</label>
+      <InputText id="KommuneName" @bind-Value="Shelter.KommuneName" class="form-control" />
+   </div>
+   <div class="col-md-6 mb-3">
+      <label for="Description">Beskrivelse</label>
+      <InputText id="Description" @bind-Value="Shelter.Description" class="form-control" />
+   </div>
+   <div class="col-md-12 mb-3">
+      <label for="Capacity">Antal Pladser</label>
+      <InputNumber id="Capacity" @bind-Value="Shelter.Capacity" class="form-control" />
+   </div>
+   <div class="col-12 mb-3">
+      <div class="form-check">
+         <InputCheckbox id="IsAvailable" @bind-Value="Shelter.IsAvailable" class="form-check-input" />
+         <label class="form-check-label" for="IsAvailable"><a href="c:\users\asbjørn\desktop\c#\sheltermini\client\pages\pedel.razor.cs">c:\users\asbjørn\desktop\c#\sheltermini\client\pages\pedel.razor.cs</a>
+<a href="c:\users\asbjørn\desktop\c#\sheltermini\client\pages\pedel.razor">c:\users\asbjørn\desktop\c#\sheltermini\client\pages\pedel.razor</a>
+         Tilgængelighed
+         </label>
+      </div> 
+   </div> 
+ <div class="col-md-6 mb-3">
+      <label for="Contact">Kontakt</label>
+      <InputText id="Contact" @bind-Value="Shelter.Contact" class="form-control" />
+   </div>
+
+ <div class="col-md-6 mb-3">
+      <label for="longitude">Længdegrad</label>
+      <InputNumber id="longitude" @bind-Value="Shelter.longitude" class="form-control" />
+   </div>
+
+
+ <div class="col-md-6 mb-3">
+      <label for="lat">Breddegrad</label>
+      <InputNumber id="lat" @bind-Value="Shelter.lat" class="form-control" />
+   </div>
+
+   <div class="col-12 mb-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+   </div>
+
+<div class="col-12 mb-3">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    @if (Shelter.IsBooked)
+    {
+        <button type="button" class="btn btn-danger" @onclick="RemoveBooking">Remove Booking</button>
+    }
+</div>
+
+</EditForm>
+-->
+
+@code {
+     Shelter shelter = new();
+
+        private EditContext aEditContext;
+
+        protected override void OnInitialized()
+        {
+            aEditContext = new EditContext(shelter);
+        }
+
+
+     /*   public async Task HandleValidSubmit()
+        {
+            await Http.PostAsJsonAsync<Booking>("api/booking", shelter);
+
+            shelter = new(); // clear fields in form
+
+        }
+     */
+
+}
